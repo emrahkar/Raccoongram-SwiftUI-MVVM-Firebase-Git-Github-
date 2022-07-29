@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF019F9C2892887D00EE5DB6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF019F9B2892887D00EE5DB6 /* Extensions.swift */; };
+		BF03A0B62893D812008EFD3E /* PostArrayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03A0B52893D812008EFD3E /* PostArrayObject.swift */; };
+		BF03A0B82893DB3C008EFD3E /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03A0B72893DB3C008EFD3E /* CommentsView.swift */; };
+		BF22C7E32892AC310061F58A /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22C7E22892AC310061F58A /* FeedView.swift */; };
+		BF22C7E52892AD770061F58A /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22C7E42892AD770061F58A /* PostView.swift */; };
+		BF22C7E82893D3670061F58A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22C7E72893D3670061F58A /* PostModel.swift */; };
 		BFD6CAC628908B98009AA54A /* RaccoonGramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD6CAC528908B98009AA54A /* RaccoonGramApp.swift */; };
 		BFD6CAC828908B98009AA54A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD6CAC728908B98009AA54A /* ContentView.swift */; };
 		BFD6CACA28908B9A009AA54A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD6CAC928908B9A009AA54A /* Assets.xcassets */; };
@@ -15,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF019F9B2892887D00EE5DB6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BF03A0B52893D812008EFD3E /* PostArrayObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostArrayObject.swift; sourceTree = "<group>"; };
+		BF03A0B72893DB3C008EFD3E /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		BF22C7E22892AC310061F58A /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		BF22C7E42892AD770061F58A /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		BF22C7E72893D3670061F58A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		BFD6CAC228908B98009AA54A /* RaccoonGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaccoonGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD6CAC528908B98009AA54A /* RaccoonGramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaccoonGramApp.swift; sourceTree = "<group>"; };
 		BFD6CAC728908B98009AA54A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +46,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF019F9A289287EB00EE5DB6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BF019F9B2892887D00EE5DB6 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BF22C7DE2892AAE80061F58A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF22C7DF2892AAF90061F58A /* Subviews */,
+				BF22C7E12892AB0D0061F58A /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF22C7DF2892AAF90061F58A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				BF22C7E42892AD770061F58A /* PostView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		BF22C7E12892AB0D0061F58A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BFD6CAC528908B98009AA54A /* RaccoonGramApp.swift */,
+				BFD6CAC728908B98009AA54A /* ContentView.swift */,
+				BF22C7E22892AC310061F58A /* FeedView.swift */,
+				BF03A0B72893DB3C008EFD3E /* CommentsView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BF22C7E62893D3510061F58A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF22C7E72893D3670061F58A /* PostModel.swift */,
+				BF03A0B52893D812008EFD3E /* PostArrayObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BFD6CAB928908B98009AA54A = {
 			isa = PBXGroup;
 			children = (
@@ -53,8 +110,9 @@
 		BFD6CAC428908B98009AA54A /* RaccoonGram */ = {
 			isa = PBXGroup;
 			children = (
-				BFD6CAC528908B98009AA54A /* RaccoonGramApp.swift */,
-				BFD6CAC728908B98009AA54A /* ContentView.swift */,
+				BF22C7E62893D3510061F58A /* Model */,
+				BF019F9A289287EB00EE5DB6 /* Helpers */,
+				BF22C7DE2892AAE80061F58A /* Views */,
 				BFD6CAC928908B9A009AA54A /* Assets.xcassets */,
 				BFD6CACB28908B9A009AA54A /* Preview Content */,
 				BFE98CDA2891A6EC00EAD8FB /* LaunchScreen.storyboard */,
@@ -141,7 +199,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF22C7E32892AC310061F58A /* FeedView.swift in Sources */,
+				BF22C7E82893D3670061F58A /* PostModel.swift in Sources */,
 				BFD6CAC828908B98009AA54A /* ContentView.swift in Sources */,
+				BF019F9C2892887D00EE5DB6 /* Extensions.swift in Sources */,
+				BF03A0B62893D812008EFD3E /* PostArrayObject.swift in Sources */,
+				BF22C7E52892AD770061F58A /* PostView.swift in Sources */,
+				BF03A0B82893DB3C008EFD3E /* CommentsView.swift in Sources */,
 				BFD6CAC628908B98009AA54A /* RaccoonGramApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
