@@ -13,11 +13,17 @@
 		BF22C7E32892AC310061F58A /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22C7E22892AC310061F58A /* FeedView.swift */; };
 		BF22C7E52892AD770061F58A /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22C7E42892AD770061F58A /* PostView.swift */; };
 		BF22C7E82893D3670061F58A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22C7E72893D3670061F58A /* PostModel.swift */; };
+		BF2F21E028955D6D00DA0DB6 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F21DF28955D6D00DA0DB6 /* ImageGridView.swift */; };
+		BF517EC0289585C900A25061 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF517EBF289585C900A25061 /* UploadView.swift */; };
+		BFC278BF2894249100FE43DB /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC278BE2894249100FE43DB /* MessageView.swift */; };
+		BFC278C12894261000FE43DB /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC278C02894261000FE43DB /* CommentModel.swift */; };
 		BFD6CAC628908B98009AA54A /* RaccoonGramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD6CAC528908B98009AA54A /* RaccoonGramApp.swift */; };
 		BFD6CAC828908B98009AA54A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD6CAC728908B98009AA54A /* ContentView.swift */; };
 		BFD6CACA28908B9A009AA54A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD6CAC928908B9A009AA54A /* Assets.xcassets */; };
 		BFD6CACD28908B9A009AA54A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD6CACC28908B9A009AA54A /* Preview Assets.xcassets */; };
 		BFE98CDB2891A6EC00EAD8FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE98CDA2891A6EC00EAD8FB /* LaunchScreen.storyboard */; };
+		BFFBF01C289539BA00E041F5 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF01B289539BA00E041F5 /* BrowseView.swift */; };
+		BFFBF01E28953A2600E041F5 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF01D28953A2600E041F5 /* CarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,12 +33,18 @@
 		BF22C7E22892AC310061F58A /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		BF22C7E42892AD770061F58A /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		BF22C7E72893D3670061F58A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		BF2F21DF28955D6D00DA0DB6 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		BF517EBF289585C900A25061 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
+		BFC278BE2894249100FE43DB /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		BFC278C02894261000FE43DB /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		BFD6CAC228908B98009AA54A /* RaccoonGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaccoonGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD6CAC528908B98009AA54A /* RaccoonGramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaccoonGramApp.swift; sourceTree = "<group>"; };
 		BFD6CAC728908B98009AA54A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BFD6CAC928908B9A009AA54A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD6CACC28908B9A009AA54A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BFE98CDA2891A6EC00EAD8FB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFFBF01B289539BA00E041F5 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
+		BFFBF01D28953A2600E041F5 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				BF22C7E42892AD770061F58A /* PostView.swift */,
+				BFC278BE2894249100FE43DB /* MessageView.swift */,
+				BFFBF01D28953A2600E041F5 /* CarouselView.swift */,
+				BF2F21DF28955D6D00DA0DB6 /* ImageGridView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -78,6 +93,8 @@
 				BFD6CAC728908B98009AA54A /* ContentView.swift */,
 				BF22C7E22892AC310061F58A /* FeedView.swift */,
 				BF03A0B72893DB3C008EFD3E /* CommentsView.swift */,
+				BFFBF01B289539BA00E041F5 /* BrowseView.swift */,
+				BF517EBF289585C900A25061 /* UploadView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -87,6 +104,7 @@
 			children = (
 				BF22C7E72893D3670061F58A /* PostModel.swift */,
 				BF03A0B52893D812008EFD3E /* PostArrayObject.swift */,
+				BFC278C02894261000FE43DB /* CommentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,10 +220,16 @@
 				BF22C7E32892AC310061F58A /* FeedView.swift in Sources */,
 				BF22C7E82893D3670061F58A /* PostModel.swift in Sources */,
 				BFD6CAC828908B98009AA54A /* ContentView.swift in Sources */,
+				BFC278BF2894249100FE43DB /* MessageView.swift in Sources */,
 				BF019F9C2892887D00EE5DB6 /* Extensions.swift in Sources */,
 				BF03A0B62893D812008EFD3E /* PostArrayObject.swift in Sources */,
+				BF2F21E028955D6D00DA0DB6 /* ImageGridView.swift in Sources */,
 				BF22C7E52892AD770061F58A /* PostView.swift in Sources */,
+				BFFBF01C289539BA00E041F5 /* BrowseView.swift in Sources */,
+				BFC278C12894261000FE43DB /* CommentModel.swift in Sources */,
 				BF03A0B82893DB3C008EFD3E /* CommentsView.swift in Sources */,
+				BF517EC0289585C900A25061 /* UploadView.swift in Sources */,
+				BFFBF01E28953A2600E041F5 /* CarouselView.swift in Sources */,
 				BFD6CAC628908B98009AA54A /* RaccoonGramApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
