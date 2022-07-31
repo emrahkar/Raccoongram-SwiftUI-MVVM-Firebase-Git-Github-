@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PostView: View {
     
+    
     @State var post: PostModel
     @State var showHeaderAndFooter: Bool
     
@@ -19,16 +20,23 @@ struct PostView: View {
             
             if showHeaderAndFooter {
                 HStack {
-                    Image("raccoon1")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 30, height: 30, alignment: .center)
-                        .cornerRadius(15)
                     
-                    Text(post.username)
-                        .font(.callout)
-                        .fontWeight(.medium)
-                        .foregroundColor(.primary)
+                    NavigationLink {
+                        ProfileView(ismyProfile: false, profileDisplayName: post.username, profileUserID: post.userID)
+                    } label: {
+                        Image("raccoon1")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 30, height: 30, alignment: .center)
+                            .cornerRadius(15)
+                        
+                        Text(post.username)
+                            .font(.callout)
+                            .fontWeight(.medium)
+                            .foregroundColor(.primary)
+                    }
+
+                    
                     
                     Spacer()
                     

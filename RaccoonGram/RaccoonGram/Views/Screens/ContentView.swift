@@ -33,7 +33,9 @@ struct ContentView: View {
                     Text("Upload")
                 }
             
-            Text("Screen4")
+            NavigationView {
+                ProfileView(ismyProfile: true, profileDisplayName: "My Profile", profileUserID: "")
+            }
                 .tabItem {
                     Image(systemName: "pawprint.fill")
                     Text("Profile")

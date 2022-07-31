@@ -15,6 +15,8 @@
 		BF22C7E82893D3670061F58A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22C7E72893D3670061F58A /* PostModel.swift */; };
 		BF2F21E028955D6D00DA0DB6 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F21DF28955D6D00DA0DB6 /* ImageGridView.swift */; };
 		BF517EC0289585C900A25061 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF517EBF289585C900A25061 /* UploadView.swift */; };
+		BFA9258228967D2A008A97AC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA9258128967D2A008A97AC /* ImagePicker.swift */; };
+		BFA92585289690C5008A97AC /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA92584289690C5008A97AC /* PostImageView.swift */; };
 		BFC278BF2894249100FE43DB /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC278BE2894249100FE43DB /* MessageView.swift */; };
 		BFC278C12894261000FE43DB /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC278C02894261000FE43DB /* CommentModel.swift */; };
 		BFD6CAC628908B98009AA54A /* RaccoonGramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD6CAC528908B98009AA54A /* RaccoonGramApp.swift */; };
@@ -22,6 +24,8 @@
 		BFD6CACA28908B9A009AA54A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD6CAC928908B9A009AA54A /* Assets.xcassets */; };
 		BFD6CACD28908B9A009AA54A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD6CACC28908B9A009AA54A /* Preview Assets.xcassets */; };
 		BFE98CDB2891A6EC00EAD8FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE98CDA2891A6EC00EAD8FB /* LaunchScreen.storyboard */; };
+		BFE9B0F82896A671007BA449 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE9B0F72896A671007BA449 /* ProfileView.swift */; };
+		BFE9B0FA2896A680007BA449 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE9B0F92896A680007BA449 /* ProfileHeaderView.swift */; };
 		BFFBF01C289539BA00E041F5 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF01B289539BA00E041F5 /* BrowseView.swift */; };
 		BFFBF01E28953A2600E041F5 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBF01D28953A2600E041F5 /* CarouselView.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +39,9 @@
 		BF22C7E72893D3670061F58A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		BF2F21DF28955D6D00DA0DB6 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
 		BF517EBF289585C900A25061 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
+		BFA9258128967D2A008A97AC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		BFA9258328968615008A97AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BFA92584289690C5008A97AC /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		BFC278BE2894249100FE43DB /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		BFC278C02894261000FE43DB /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		BFD6CAC228908B98009AA54A /* RaccoonGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaccoonGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +50,8 @@
 		BFD6CAC928908B9A009AA54A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD6CACC28908B9A009AA54A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BFE98CDA2891A6EC00EAD8FB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFE9B0F72896A671007BA449 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BFE9B0F92896A680007BA449 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		BFFBF01B289539BA00E041F5 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		BFFBF01D28953A2600E041F5 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +91,8 @@
 				BFC278BE2894249100FE43DB /* MessageView.swift */,
 				BFFBF01D28953A2600E041F5 /* CarouselView.swift */,
 				BF2F21DF28955D6D00DA0DB6 /* ImageGridView.swift */,
+				BFA9258128967D2A008A97AC /* ImagePicker.swift */,
+				BFE9B0F92896A680007BA449 /* ProfileHeaderView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -95,6 +106,8 @@
 				BF03A0B72893DB3C008EFD3E /* CommentsView.swift */,
 				BFFBF01B289539BA00E041F5 /* BrowseView.swift */,
 				BF517EBF289585C900A25061 /* UploadView.swift */,
+				BFA92584289690C5008A97AC /* PostImageView.swift */,
+				BFE9B0F72896A671007BA449 /* ProfileView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -128,6 +141,7 @@
 		BFD6CAC428908B98009AA54A /* RaccoonGram */ = {
 			isa = PBXGroup;
 			children = (
+				BFA9258328968615008A97AC /* Info.plist */,
 				BF22C7E62893D3510061F58A /* Model */,
 				BF019F9A289287EB00EE5DB6 /* Helpers */,
 				BF22C7DE2892AAE80061F58A /* Views */,
@@ -219,16 +233,20 @@
 			files = (
 				BF22C7E32892AC310061F58A /* FeedView.swift in Sources */,
 				BF22C7E82893D3670061F58A /* PostModel.swift in Sources */,
+				BFA92585289690C5008A97AC /* PostImageView.swift in Sources */,
 				BFD6CAC828908B98009AA54A /* ContentView.swift in Sources */,
 				BFC278BF2894249100FE43DB /* MessageView.swift in Sources */,
 				BF019F9C2892887D00EE5DB6 /* Extensions.swift in Sources */,
 				BF03A0B62893D812008EFD3E /* PostArrayObject.swift in Sources */,
 				BF2F21E028955D6D00DA0DB6 /* ImageGridView.swift in Sources */,
 				BF22C7E52892AD770061F58A /* PostView.swift in Sources */,
+				BFE9B0F82896A671007BA449 /* ProfileView.swift in Sources */,
 				BFFBF01C289539BA00E041F5 /* BrowseView.swift in Sources */,
 				BFC278C12894261000FE43DB /* CommentModel.swift in Sources */,
 				BF03A0B82893DB3C008EFD3E /* CommentsView.swift in Sources */,
+				BFE9B0FA2896A680007BA449 /* ProfileHeaderView.swift in Sources */,
 				BF517EC0289585C900A25061 /* UploadView.swift in Sources */,
+				BFA9258228967D2A008A97AC /* ImagePicker.swift in Sources */,
 				BFFBF01E28953A2600E041F5 /* CarouselView.swift in Sources */,
 				BFD6CAC628908B98009AA54A /* RaccoonGramApp.swift in Sources */,
 			);
@@ -364,6 +382,9 @@
 				DEVELOPMENT_TEAM = 95JYV82DR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RaccoonGram/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera at the users request to take photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "this allows app to use acess photos and import/save photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -395,6 +416,9 @@
 				DEVELOPMENT_TEAM = 95JYV82DR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RaccoonGram/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera at the users request to take photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "this allows app to use acess photos and import/save photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
