@@ -59,15 +59,10 @@ struct PostImageView: View {
                         .background(Color.MyTheme.tealColor)
                         .cornerRadius(12)
                         .padding(.horizontal)
-                        
-                        
                 }
                 .accentColor(Color.MyTheme.lavenderColor)
-
             }
-
         }
-        
     }
     
     //MARK: FUNCTIONS

@@ -50,7 +50,6 @@ struct UploadView: View {
                 ImagePicker(imageSelected: $imageSelected, sourceType: $sourceType)
             }
             
-            
             Image("logo.transparent")
                 .resizable()
                 .scaledToFit()
@@ -59,16 +58,13 @@ struct UploadView: View {
                 .fullScreenCover(isPresented: $showPostImageView) {
                     PostImageView(imageSelected: $imageSelected)
                 }
-
-              
         }
         .edgesIgnoringSafeArea(.top)
     }
     
     func toPostImageView() {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            showPostImageView.toggle()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                showPostImageView.toggle()
         }
     }
 }

@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var currentUserID: String? = nil
+    
     var body: some View {
+        
         TabView{
             NavigationView{
                 FeedView(posts: PostArrayObject(), title: "Feed")
@@ -17,7 +21,6 @@ struct ContentView: View {
                     Image(systemName: "book.fill")
                     Text("Feed")
                 }
-            
             
             NavigationView {
                 BrowseView()
@@ -33,8 +36,14 @@ struct ContentView: View {
                     Text("Upload")
                 }
             
-            NavigationView {
-                ProfileView(ismyProfile: true, profileDisplayName: "My Profile", profileUserID: "")
+            ZStack{
+                if currentUserID != nil {
+                    NavigationView {
+                        ProfileView(ismyProfile: true, profileDisplayName: "My Profile", profileUserID: "")
+                    }
+                } else {
+                    SignUpView()
+                }
             }
                 .tabItem {
                     Image(systemName: "pawprint.fill")

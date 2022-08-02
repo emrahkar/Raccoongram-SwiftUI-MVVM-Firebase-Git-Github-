@@ -40,7 +40,6 @@ struct CommentsView: View {
                         .font(.title2)
                 }
                 .accentColor(Color.MyTheme.tealColor)
-
             }
             .padding(.all, 6)
         }
@@ -66,8 +65,6 @@ struct CommentsView: View {
         self.commentArray.append(comment2)
         self.commentArray.append(comment3)
         self.commentArray.append(comment4)
-        
-        
     }
 }
 
