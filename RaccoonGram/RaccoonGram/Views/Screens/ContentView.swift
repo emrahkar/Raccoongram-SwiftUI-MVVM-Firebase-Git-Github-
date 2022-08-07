@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var currentUserID: String? = nil
+    @Environment(\.colorScheme) var colorScheme
+    var currentUserID: String? = "userID"
     
     var body: some View {
         
@@ -50,12 +51,13 @@ struct ContentView: View {
                     Text("Profile")
                 }
         }
-        .accentColor(Color.MyTheme.tealColor)
+        .accentColor(colorScheme == .light ? Color.MyTheme.tealColor : Color.MyTheme.lavenderColor)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.light)
     }
 }

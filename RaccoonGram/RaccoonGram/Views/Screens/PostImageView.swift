@@ -10,6 +10,8 @@ import SwiftUI
 struct PostImageView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.colorScheme) var colorScheme
+    
     @State var captionText: String = ""
     @Binding var imageSelected: UIImage
     
@@ -42,7 +44,7 @@ struct PostImageView: View {
                     .padding()
                     .frame(height: 60)
                     .frame(maxWidth: .infinity)
-                    .background(Color.MyTheme.beigeColor)
+                    .background(colorScheme == .light ? Color.MyTheme.beigeColor : Color.MyTheme.tealColor)
                     .cornerRadius(12)
                     .padding(.horizontal)
                     .autocapitalization(.sentences)
@@ -56,11 +58,11 @@ struct PostImageView: View {
                         .padding()
                         .frame(height: 60)
                         .frame(maxWidth: .infinity)
-                        .background(Color.MyTheme.tealColor)
+                        .background(colorScheme == .light ? Color.MyTheme.tealColor : Color.MyTheme.lavenderColor)
                         .cornerRadius(12)
                         .padding(.horizontal)
                 }
-                .accentColor(Color.MyTheme.lavenderColor)
+                .accentColor(colorScheme == .light ? Color.MyTheme.lavenderColor : Color.MyTheme.tealColor)
             }
         }
     }
@@ -74,8 +76,9 @@ struct PostImageView: View {
 
 struct PostImageView_Previews: PreviewProvider {
     
-    @State static var image = UIImage(named: "dog1")!
+    @State static var image = UIImage(named: "raccoon1")!
     static var previews: some View {
         PostImageView(imageSelected: $image)
+            .preferredColorScheme(.dark)
     }
 }

@@ -14,6 +14,8 @@ struct SettingsEditTextView: View {
     @State var description: String
     @State var placeholder: String
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         VStack {
             HStack {
@@ -25,7 +27,7 @@ struct SettingsEditTextView: View {
                 .padding()
                 .frame(height: 60)
                 .frame(maxWidth: .infinity)
-                .background(Color.MyTheme.beigeColor)
+                .background(colorScheme == .light ? Color.MyTheme.beigeColor : Color.MyTheme.tealColor)
                 .cornerRadius(12)
                 .font(.headline)
                 .autocapitalization(.none)
@@ -39,10 +41,10 @@ struct SettingsEditTextView: View {
                     .padding()
                     .frame(height: 60)
                     .frame(maxWidth: .infinity)
-                    .background(Color.MyTheme.tealColor)
+                    .background(colorScheme == .light ? Color.MyTheme.tealColor : Color.MyTheme.lavenderColor)
                     .cornerRadius(12)
             }
-            .accentColor(Color.MyTheme.lavenderColor)
+            .accentColor(colorScheme == .light ? Color.MyTheme.lavenderColor : Color.MyTheme.tealColor)
 
             
             Spacer()
@@ -59,6 +61,7 @@ struct SettingsEditTextView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
             SettingsEditTextView(title: "Test Title", description: "This is description", placeholder: "Test placeholder")
+                .preferredColorScheme(.light)
         }
     }
 }

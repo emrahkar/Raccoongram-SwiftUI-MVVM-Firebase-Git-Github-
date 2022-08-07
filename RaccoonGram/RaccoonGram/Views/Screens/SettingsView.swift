@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
@@ -119,6 +120,7 @@ struct SettingsView: View {
             
                                     )
         }
+        .accentColor(colorScheme == .light ? Color.MyTheme.tealColor : Color.MyTheme.lavenderColor)
     }
     
     //MARK: FUNCTIONS
@@ -135,5 +137,6 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+            .preferredColorScheme(.light)
     }
 }
