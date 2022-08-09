@@ -41,6 +41,29 @@ class AuthService {
         }
         
         
+        //FireBase Auth
+//            Auth.auth().signIn(with: credential) { result, error in
+//
+//                isLoading = false
+//
+//                if let error = error {
+//                    print(error.localizedDescription)
+//                    return
+//                  }
+//
+//                //Displaying User Name
+//
+//                guard let user = result?.user else {
+//                    return
+//                }
+//
+//                print(user.displayName ?? "Success")
+//
+//                self.showOnBoardingPart2.toggle()
+//
+//            }
+        
+        
         
         
         

@@ -135,31 +135,8 @@ struct OnboardingView: View {
               let credential = GoogleAuthProvider.credential(withIDToken: idToken,
                                                              accessToken: authentication.accessToken)
             
-          
-            
              self.connectToFirebase(name: fullname, email: email, provider: "google", credential: credential)
-            
-            //FireBase Auth
-//            Auth.auth().signIn(with: credential) { result, error in
-//
-//                isLoading = false
-//
-//                if let error = error {
-//                    print(error.localizedDescription)
-//                    return
-//                  }
-//
-//                //Displaying User Name
-//
-//                guard let user = result?.user else {
-//                    return
-//                }
-//
-//                print(user.displayName ?? "Success")
-//
-//                self.showOnBoardingPart2.toggle()
-//
-//            }
+
         }
     }
     
@@ -183,7 +160,6 @@ struct OnboardingView: View {
             }
         }
     }
-    
 }
 
 struct OnboardingView_Previews: PreviewProvider {
