@@ -8,16 +8,19 @@
 import SwiftUI
 import Firebase
 import GoogleSignIn
+import FirebaseAuth
 
 struct OnboardingView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @State var showOnBoardingPart2: Bool = false
     @State var isLoading: Bool = false
+    
+    @State var displayName: String = ""
+    @State var email: String = ""
+    @State var providerID: String = ""
+    @State var provider: String = ""
    
-    
-    
-    
     var body: some View {
         VStack(spacing: 10) {
             Image("logo.transparent")
@@ -83,7 +86,7 @@ struct OnboardingView: View {
         .background(Color.MyTheme.beigeColor)
         .edgesIgnoringSafeArea(.all)
         .fullScreenCover(isPresented: $showOnBoardingPart2) {
-            OnboardingViewPart2()
+            OnboardingViewPart2(displayName: $displayName, email: $email, providerID: $providerID, provider: $provider)
         }
         .overlay(
         
@@ -100,9 +103,7 @@ struct OnboardingView: View {
                         .cornerRadius(10)
                 }
             }
-        
         )
-        
     }
     
     func handleLogin() {
@@ -134,26 +135,51 @@ struct OnboardingView: View {
               let credential = GoogleAuthProvider.credential(withIDToken: idToken,
                                                              accessToken: authentication.accessToken)
             
+          
+            
+             self.connectToFirebase(name: fullname, email: email, provider: "google", credential: credential)
+            
             //FireBase Auth
-            Auth.auth().signIn(with: credential) { result, error in
+//            Auth.auth().signIn(with: credential) { result, error in
+//
+//                isLoading = false
+//
+//                if let error = error {
+//                    print(error.localizedDescription)
+//                    return
+//                  }
+//
+//                //Displaying User Name
+//
+//                guard let user = result?.user else {
+//                    return
+//                }
+//
+//                print(user.displayName ?? "Success")
+//
+//                self.showOnBoardingPart2.toggle()
+//
+//            }
+        }
+    }
+    
+    func connectToFirebase(name: String, email: String, provider: String, credential: AuthCredential) {
+        
+        AuthService.instance.logInUsertoFirebase(credential: credential) { returnedproviderID, isError in
+            
+            if let providerID = returnedproviderID, !isError {
                 
-                isLoading = false
-                
-                if let error = error {
-                    print(error.localizedDescription)
-                    return
-                  }
-                
-                //Displaying User Name
-                
-                guard let user = result?.user else {
-                    return
-                }
-                
-                print(user.displayName ?? "Success")
+                self.displayName = name
+                self.email = email
+                self.providerID = providerID
+                self.provider = provider
                 
                 self.showOnBoardingPart2.toggle()
                 
+                
+            } else {
+                print("Error getting infor from logging into firebase")
+
             }
         }
     }
