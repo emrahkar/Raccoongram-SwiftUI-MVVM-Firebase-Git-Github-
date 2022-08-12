@@ -14,12 +14,14 @@
 		BF07D41C28983C9500AC39E7 /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D41B28983C9500AC39E7 /* SettingsLabelView.swift */; };
 		BF082D46289855A9000743AF /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF082D45289855A9000743AF /* SettingsRowView.swift */; };
 		BF11379D28A259010008F489 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11379C28A259010008F489 /* AuthService.swift */; };
+		BF1A050328A683F4009F71A1 /* Enums & Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A050228A683F4009F71A1 /* Enums & Structs.swift */; };
 		BF22C7E32892AC310061F58A /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22C7E22892AC310061F58A /* FeedView.swift */; };
 		BF22C7E52892AD770061F58A /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22C7E42892AD770061F58A /* PostView.swift */; };
 		BF22C7E82893D3670061F58A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22C7E72893D3670061F58A /* PostModel.swift */; };
 		BF2490B0289936FF0008293E /* SettingsEditImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2490AF289936FF0008293E /* SettingsEditImageView.swift */; };
 		BF2C5D7728994881001E4860 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C5D7628994881001E4860 /* SignUpView.swift */; };
 		BF2F21E028955D6D00DA0DB6 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F21DF28955D6D00DA0DB6 /* ImageGridView.swift */; };
+		BF43DCDB28A6A86300316124 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF43DCDA28A6A86300316124 /* ImageManager.swift */; };
 		BF517EC0289585C900A25061 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF517EBF289585C900A25061 /* UploadView.swift */; };
 		BF6D6607289A60E70051A477 /* LikeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D6606289A60E70051A477 /* LikeAnimationView.swift */; };
 		BF7163AD2899315A009C09CE /* SettingsEditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7163AC2899315A009C09CE /* SettingsEditTextView.swift */; };
@@ -57,12 +59,14 @@
 		BF07D41B28983C9500AC39E7 /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
 		BF082D45289855A9000743AF /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		BF11379C28A259010008F489 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		BF1A050228A683F4009F71A1 /* Enums & Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums & Structs.swift"; sourceTree = "<group>"; };
 		BF22C7E22892AC310061F58A /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		BF22C7E42892AD770061F58A /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		BF22C7E72893D3670061F58A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		BF2490AF289936FF0008293E /* SettingsEditImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditImageView.swift; sourceTree = "<group>"; };
 		BF2C5D7628994881001E4860 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BF2F21DF28955D6D00DA0DB6 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		BF43DCDA28A6A86300316124 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		BF517EBF289585C900A25061 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 		BF6D6606289A60E70051A477 /* LikeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAnimationView.swift; sourceTree = "<group>"; };
 		BF7163AC2899315A009C09CE /* SettingsEditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditTextView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				BF019F9B2892887D00EE5DB6 /* Extensions.swift */,
+				BF1A050228A683F4009F71A1 /* Enums & Structs.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -119,6 +124,14 @@
 				BF11379C28A259010008F489 /* AuthService.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		BF1A050128A67F87009F71A1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF11379B28A258E90008F489 /* Firebase */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		BF22C7DE2892AAE80061F58A /* Views */ = {
@@ -178,6 +191,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BF43DCD928A6A84500316124 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BF43DCDA28A6A86300316124 /* ImageManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		BF7B1A7828A120FB009E27A8 /* SignInProviders */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +225,8 @@
 		BFD6CAC428908B98009AA54A /* RaccoonGram */ = {
 			isa = PBXGroup;
 			children = (
-				BF11379B28A258E90008F489 /* Firebase */,
+				BF43DCD928A6A84500316124 /* Utilities */,
+				BF1A050128A67F87009F71A1 /* Services */,
 				BF7B1A7828A120FB009E27A8 /* SignInProviders */,
 				BF22C7E62893D3510061F58A /* Model */,
 				BF019F9A289287EB00EE5DB6 /* Helpers */,
@@ -313,12 +335,14 @@
 			files = (
 				BF22C7E32892AC310061F58A /* FeedView.swift in Sources */,
 				BFD6FDB1289986DE004F5FC4 /* SignInWithAppleButtonCustom.swift in Sources */,
+				BF43DCDB28A6A86300316124 /* ImageManager.swift in Sources */,
 				BF22C7E82893D3670061F58A /* PostModel.swift in Sources */,
 				BF07D41C28983C9500AC39E7 /* SettingsLabelView.swift in Sources */,
 				BFA92585289690C5008A97AC /* PostImageView.swift in Sources */,
 				BF2C5D7728994881001E4860 /* SignUpView.swift in Sources */,
 				BFD6CAC828908B98009AA54A /* ContentView.swift in Sources */,
 				BFC278BF2894249100FE43DB /* MessageView.swift in Sources */,
+				BF1A050328A683F4009F71A1 /* Enums & Structs.swift in Sources */,
 				BF019F9C2892887D00EE5DB6 /* Extensions.swift in Sources */,
 				BF03A0B62893D812008EFD3E /* PostArrayObject.swift in Sources */,
 				BF2F21E028955D6D00DA0DB6 /* ImageGridView.swift in Sources */,

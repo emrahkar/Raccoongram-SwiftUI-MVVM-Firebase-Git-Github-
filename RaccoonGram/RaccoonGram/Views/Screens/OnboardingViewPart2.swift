@@ -19,6 +19,7 @@ struct OnboardingViewPart2: View {
     //FOr image picket
     @State var imageSelected: UIImage = UIImage(named: "logo")!
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    @State var showError: Bool = false
     
     var body: some View {
         
@@ -61,12 +62,25 @@ struct OnboardingViewPart2: View {
         .sheet(isPresented: $showImagePicker, onDismiss: createProfile) {
             ImagePicker(imageSelected: $imageSelected, sourceType: $sourceType)
         }
+        .alert(isPresented: $showError) {
+            return Alert(title: Text("Error creating profile"))
+        }
         
     }
     
     //MARK: FUNCTIONS
     
     func createProfile() {
+        
+        AuthService.instance.createNewUserInDatabase(name: displayName, email: email, providerID: providerID, provider: provider, profileImage: imageSelected) { (returnedUserID) in
+            
+            if let userID = returnedUserID {
+                //SUCESS
+            } else {
+                //error
+                print("Error in creating user in database")
+            }
+        }
         print("Create Profile")
     }
 }
