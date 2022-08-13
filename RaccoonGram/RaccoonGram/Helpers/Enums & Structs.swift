@@ -19,3 +19,11 @@ struct DatabaseUserField { //field within the user document in database
     
     
 }
+
+struct CurrentUserDefaults {
+    
+    static let displayName = "display_name"
+    static let bio = "bio"
+    static let userID = "user_id"
+    
+}

@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.colorScheme) var colorScheme
-    var currentUserID: String? = nil
+ 
+    @AppStorage(CurrentUserDefaults.userID) var currentUserID: String?
   
     
     var body: some View {

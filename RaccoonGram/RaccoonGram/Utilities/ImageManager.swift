@@ -44,7 +44,7 @@ class ImageManager {
     private func uploadImage(path: StorageReference, image: UIImage, handler: @escaping(_ success: Bool)-> ()) {
         
         var compression: CGFloat = 1.0 //loops down by 0.05
-        let maxFileSize: Int = 240 * 240
+        let maxFileSize: Int = 240 * 240 // max file size we want to save
         let maxCompression: CGFloat = 0.05 //maximum compression allowed
         
         
@@ -82,7 +82,7 @@ class ImageManager {
         //save data to path
         path.putData(finalData, metadata: metaData) { (_, error) in
             if let error = error {
-                print("Error uploading data")
+                print("Error uploading image \(error)")
                 handler(false)
                 return
             } else {

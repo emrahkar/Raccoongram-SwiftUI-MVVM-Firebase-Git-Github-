@@ -9,6 +9,9 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.presentationMode) var presentationMode
+    @State var showSignOutError: Bool = false
+    
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
@@ -53,8 +56,17 @@ struct SettingsView: View {
                     }
 
                    
+                    Button {
+                        signOut()
+                    } label: {
+                        SettingsRowView(leftIcon: "figure.walk", text: "Sign out", color: Color.MyTheme.tealColor)
+                    }
+                    .alert(isPresented: $showSignOutError) {
+                        return Alert(title: Text("Error sign out"))
+                    }
+
                     
-                    SettingsRowView(leftIcon: "figure.walk", text: "Sign out", color: Color.MyTheme.tealColor)
+                  
 
                     
                 } label: {
@@ -130,6 +142,29 @@ struct SettingsView: View {
         
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
+        }
+    }
+    
+    func signOut() {
+        AuthService.instance.logOutUser { success in
+            if success {
+                print("Successfully log out")
+                self.presentationMode.wrappedValue.dismiss()
+                
+                // update userdefaults
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    
+                    let defaultsDictionary = UserDefaults.standard.dictionaryRepresentation()
+                    defaultsDictionary.keys.forEach { key in
+                        UserDefaults.standard.removeObject(forKey: key)
+                    }
+                    
+                }
+            } else {
+                print("Error logging out")
+                self.showSignOutError.toggle()
+            }
         }
     }
 }

@@ -56,13 +56,31 @@ class AuthService {
                 print("Success getting user info while logging in")
                 handler(true)
                 
-                //Set the users info in our app/
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    //Set the users info in our app/
+                    UserDefaults.standard.set(userID, forKey: CurrentUserDefaults.userID)
+                    UserDefaults.standard.set(bio, forKey: CurrentUserDefaults.bio)
+                    UserDefaults.standard.set(name, forKey: CurrentUserDefaults.displayName)
+                }
+               
+                
             } else{
                 print("error getting user infowhile logging in)")
                 handler(false)
             }
         }
         //set the users info into our app
+    }
+    
+    func logOutUser(handler: @escaping (_ success: Bool) ->()) {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("Error \(error)")
+            handler(false)
+        }
+        
+        handler(true)
     }
     
     func createNewUserInDatabase(name: String, email: String, providerID: String, provider: String, profileImage: UIImage, handler: @escaping (_ userID: String?) ->()) {

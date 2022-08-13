@@ -9,6 +9,10 @@ import SwiftUI
 
 struct OnboardingViewPart2: View {
     
+    
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.presentationMode) var presentationMode
+    
     @Binding var displayName: String
     @Binding var email: String
     @Binding var providerID: String
@@ -75,7 +79,23 @@ struct OnboardingViewPart2: View {
         AuthService.instance.createNewUserInDatabase(name: displayName, email: email, providerID: providerID, provider: provider, profileImage: imageSelected) { (returnedUserID) in
             
             if let userID = returnedUserID {
-                //SUCESS
+                print("sucessfully created new user in database")
+                
+                AuthService.instance.logInUserToApp(userID: userID) { success in
+                    if success {
+                        print("User logged in!")
+                        //return to app
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                        
+                        
+                    } else {
+                        print("error logging in")
+                        self.showError.toggle()
+                    }
+                }
+                
             } else {
                 //error
                 print("Error in creating user in database")

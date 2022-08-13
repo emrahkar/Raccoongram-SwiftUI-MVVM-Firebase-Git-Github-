@@ -85,7 +85,9 @@ struct OnboardingView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.MyTheme.beigeColor)
         .edgesIgnoringSafeArea(.all)
-        .fullScreenCover(isPresented: $showOnBoardingPart2) {
+        .fullScreenCover(isPresented: $showOnBoardingPart2, onDismiss: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
             OnboardingViewPart2(displayName: $displayName, email: $email, providerID: $providerID, provider: $provider)
         }
         .overlay(
