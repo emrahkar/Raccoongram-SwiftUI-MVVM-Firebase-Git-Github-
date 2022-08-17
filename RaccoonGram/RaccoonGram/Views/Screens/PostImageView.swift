@@ -15,6 +15,14 @@ struct PostImageView: View {
     @State var captionText: String = ""
     @Binding var imageSelected: UIImage
     
+    @AppStorage(CurrentUserDefaults.userID) var currentUserID: String?
+    @AppStorage(CurrentUserDefaults.displayName) var currentUserDisplayName: String?
+    
+    //Alert
+    
+    @State var showAlert:Bool = false
+    @State var postUploadedSuccessfully: Bool = false
+    
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             
@@ -64,6 +72,9 @@ struct PostImageView: View {
                 }
                 .accentColor(colorScheme == .light ? Color.MyTheme.lavenderColor : Color.MyTheme.tealColor)
             }
+            .alert(isPresented: $showAlert) {
+                getAlert()
+            }
         }
     }
     
@@ -71,6 +82,27 @@ struct PostImageView: View {
     
     func postPicture() {
         print("POST PICTURE TO DATABASE HERE")
+        
+        guard let userID = currentUserID, let displayName = currentUserDisplayName else {
+            print("error getting userID or display name while posting image")
+            return
+        }
+        
+        DataService.instance.uploadPost(image: imageSelected, caption: captionText, displayName: displayName, userID: userID) { (success) in
+            self.postUploadedSuccessfully = success
+            self.showAlert.toggle()
+        }
+    }
+    
+    func getAlert() -> Alert {
+        
+        if postUploadedSuccessfully {
+            return Alert(title: Text("sucessfully uploaded post"), message: nil, dismissButton: .default(Text("OK"), action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }))
+        } else {
+            return Alert(title: Text("Error poading post"))
+        }
     }
 }
 

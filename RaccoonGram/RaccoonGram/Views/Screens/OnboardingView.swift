@@ -144,21 +144,44 @@ struct OnboardingView: View {
     
     func connectToFirebase(name: String, email: String, provider: String, credential: AuthCredential) {
         
-        AuthService.instance.logInUsertoFirebase(credential: credential) { returnedproviderID, isError in
+        AuthService.instance.logInUsertoFirebase(credential: credential) { returnedproviderID, isError, isNewUser, returnedUserID in
             
-            if let providerID = returnedproviderID, !isError {
+            if let newUser = isNewUser {
                 
-                self.displayName = name
-                self.email = email
-                self.providerID = providerID
-                self.provider = provider
-                
-                self.showOnBoardingPart2.toggle()
-                
-                
+                if newUser {
+                    //new user
+                    if let providerID = returnedproviderID, !isError {
+                        //New user continue to onboarding part 2
+                        self.displayName = name
+                        self.email = email
+                        self.providerID = providerID
+                        self.provider = provider
+                        
+                        self.showOnBoardingPart2.toggle()
+                        
+                        
+                    } else {//Error
+                        print("Error getting provider ID from logging into firebase")
+                    
+                    }
+                } else{
+                    //Existing user
+                    if let userID = returnedUserID {
+                        //Sucess. log in app
+                        AuthService.instance.logInUserToApp(userID: userID) { success in
+                            if success {
+                                print("Sucessful log in existing user")
+                                self.presentationMode.wrappedValue.dismiss()
+                            } else {
+                                print("Error loging existing, user into our app")
+                                
+                            }
+                        }
+                    }
+                }
             } else {
                 print("Error getting infor from logging into firebase")
-
+               
             }
         }
     }

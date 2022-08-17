@@ -20,6 +20,15 @@ struct DatabaseUserField { //field within the user document in database
     
 }
 
+struct DatabasePostField {
+    
+    static let postID = "post_id"
+    static let userID = "user_id"
+    static let displayName = "display_name"
+    static let caption = "caption"
+    static let dateCreated = "date_created"
+}
+
 struct CurrentUserDefaults {
     
     static let displayName = "display_name"

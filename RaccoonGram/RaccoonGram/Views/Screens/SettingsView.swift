@@ -139,7 +139,6 @@ struct SettingsView: View {
     
     func openCustomURL(urlString: String) {
         guard let url = URL(string: urlString) else { return }
-        
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
         }
@@ -150,17 +149,6 @@ struct SettingsView: View {
             if success {
                 print("Successfully log out")
                 self.presentationMode.wrappedValue.dismiss()
-                
-                // update userdefaults
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    
-                    let defaultsDictionary = UserDefaults.standard.dictionaryRepresentation()
-                    defaultsDictionary.keys.forEach { key in
-                        UserDefaults.standard.removeObject(forKey: key)
-                    }
-                    
-                }
             } else {
                 print("Error logging out")
                 self.showSignOutError.toggle()
