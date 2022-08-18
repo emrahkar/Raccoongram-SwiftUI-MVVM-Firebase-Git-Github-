@@ -19,7 +19,7 @@ struct ProfileView: View {
     
     
     
-    var posts = PostArrayObject()
+    var posts: PostArrayObject
     
     @State var showSettings: Bool = false
     
@@ -64,7 +64,7 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            ProfileView(ismyProfile: true, profileDisplayName: "Joe", profileUserID: "")
+            ProfileView(ismyProfile: true, profileDisplayName: "Joe", profileUserID: "", posts: PostArrayObject(userID: ""))
         }
         .preferredColorScheme(.dark)
     }

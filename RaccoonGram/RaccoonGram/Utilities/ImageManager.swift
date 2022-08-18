@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseStorage
 import UIKit
+import SwiftUI
 
 let imageCache = NSCache<AnyObject, UIImage>()
 
@@ -53,6 +54,18 @@ class ImageManager {
             handler(returnedImage)
         }
         
+    }
+    
+    func downloadPostImage(postID: String, handler: @escaping (_ image:UIImage?) ->()) {
+        
+        //get the path ehre the image is saved
+        
+        let path = getPostImagePath(postID: postID)
+        
+        //DOWNLOAD IMAGE FOR PATH
+        downloadImage(path: path) {returnedImage in
+            handler(returnedImage)
+        }
     }
     
     

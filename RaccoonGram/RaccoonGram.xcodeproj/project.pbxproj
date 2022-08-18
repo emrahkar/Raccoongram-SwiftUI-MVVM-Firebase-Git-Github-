@@ -188,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				BF22C7E72893D3670061F58A /* PostModel.swift */,
-				BF03A0B52893D812008EFD3E /* PostArrayObject.swift */,
 				BFC278C02894261000FE43DB /* CommentModel.swift */,
 			);
 			path = Model;
@@ -200,6 +199,14 @@
 				BF43DCDA28A6A86300316124 /* ImageManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BF78C5F928AD4BDA001B7D89 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BF03A0B52893D812008EFD3E /* PostArrayObject.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BF7B1A7828A120FB009E27A8 /* SignInProviders */ = {
@@ -228,6 +235,7 @@
 		BFD6CAC428908B98009AA54A /* RaccoonGram */ = {
 			isa = PBXGroup;
 			children = (
+				BF78C5F928AD4BDA001B7D89 /* ViewModel */,
 				BF43DCD928A6A84500316124 /* Utilities */,
 				BF1A050128A67F87009F71A1 /* Services */,
 				BF7B1A7828A120FB009E27A8 /* SignInProviders */,
